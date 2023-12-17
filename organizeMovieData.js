@@ -5,7 +5,10 @@ function organizeMovieData(movieData) {
 
   for (const [name, [role, title]] of Object.entries(movieData)) {
     if (role === 'director') {
-      updatedMovieList[title] = { ...updatedMovieList[title], director: [name] };
+      updatedMovieList[title] = { 
+        ...updatedMovieList[title], 
+        director: [name] 
+      };
     } else if (role === 'cast') {
       updatedMovieList[title] = {
         ...updatedMovieList[title],
